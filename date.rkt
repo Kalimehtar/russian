@@ -37,9 +37,8 @@
 (define (date->string d)
   (define weekdays '#("воскресенье" "понедельник" "вторник" "среда" "четверг" "пятница" "суббота"))
   (define months '#("января" "февраля" "марта" "апреля" "мая" "июня" "июля" "августа" "сентября" "октября" "ноября" "декабря"))
-  (parameterize ([current-language 'ru])
-    (format "~a, ~a ~a, ~a"
-            (vector-ref weekdays (date-week-day d))
-            (date-day d)
-            (vector-ref months (sub1 (date-month d)))
-            (date-year d))))
+  (format "~a, ~a ~a, ~a"
+          (vector-ref weekdays (date-week-day d))
+          (date-day d)
+          (vector-ref months (sub1 (date-month d)))
+          (date-year d)))
