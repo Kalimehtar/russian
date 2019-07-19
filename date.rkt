@@ -22,9 +22,10 @@
                         (sep . "сен") (oct . "окт") (nov . "ноя") (dec . "дек")
 
                         ;; long month
-                        (january . "Январь") (february . "Февраль") (march . "Март") (april . "Апрель")
-                        (may . "Май") (june . "Июнь") (july . "Июль") (august . "Август")
-                        (septembre . "Сентябрь") (octuber . "Октябрь") (november . "Ноябрь") (december . "Декабрь")
+                        (january . "Январь") (february . "Февраль") (march . "Март")
+                        (april . "Апрель") (may . "Май") (june . "Июнь") (july . "Июль")
+                        (august . "Август") (septembre . "Сентябрь") (octuber . "Октябрь")
+                        (november . "Ноябрь") (december . "Декабрь")
                        
                         (pm . "PM") (am . "AM")
                         (date-time . "~a ~b ~d ~H:~M:~S~z ~Y")
@@ -36,7 +37,8 @@
 
 (define (date->string d)
   (define weekdays '#("воскресенье" "понедельник" "вторник" "среда" "четверг" "пятница" "суббота"))
-  (define months '#("января" "февраля" "марта" "апреля" "мая" "июня" "июля" "августа" "сентября" "октября" "ноября" "декабря"))
+  (define months '#("января" "февраля" "марта" "апреля" "мая"
+                             "июня" "июля" "августа" "сентября" "октября" "ноября" "декабря"))
   (format "~a, ~a ~a, ~a"
           (vector-ref weekdays (date-week-day d))
           (date-day d)
