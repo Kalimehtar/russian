@@ -5,7 +5,7 @@
 (require srfi/29)
 
 (define (register-srfi/19!)
-  (define id (list 'srfi-19 'ru))
+  (define id '(srfi-19 ru))
   (declare-bundle! id '( ;; weekday abbreviations
                         (sun . "вс")
                         (mon . "пн") (tue . "вт") (wed . "ср")
@@ -28,7 +28,7 @@
                         (november . "Ноябрь") (december . "Декабрь")
                        
                         (pm . "PM") (am . "AM")
-                        (date-time . "~a ~b ~d ~H:~M:~S~z ~Y")
+                        (date-time . "~a ~d ~b ~H:~M:~S~z ~Y")
                         (date . "~d/~m/~y")
                         (time . "~H:~M:~S")
                         (iso8601 . "~Y-~m-~dT~H:~M:~S~z")
