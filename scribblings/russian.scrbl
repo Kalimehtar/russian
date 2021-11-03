@@ -1,7 +1,4 @@
 #lang scribble/manual
-@require[@for-label[russian/date
-                    russian/plural
-                    racket/base]]
 
 @title{russian}
 @author+email["Roman Klochkov" "kalimehtar@mail.ru"]
@@ -9,6 +6,8 @@
 This package provides localization for russian language.
 
 Этот пакет предоставляет функции для русской локализации.
+
+@section{Даты (Dates).}
 
 @defmodule[russian/date]
 
@@ -27,6 +26,7 @@ Registers russian localization for @racket[srfi/19].
 
 Регистрирует русскую локализацию для модуля @racket[srfi/19].}
 
+@section{Числа прописью (Numbers in words).}
 @defmodule[russian/plural]
 
 This module provides text representation for numbers and utilities for plurals.
@@ -48,5 +48,5 @@ Returns version of plural form, taken from @racket[words] for given number. @rac
 @defproc[(number-in-words [n exact-integer?] [units (or/c #f (vector/c string? string? string?))]) string?]{
 Returns words presentation of @racket[n] with added correct form from @racket[units].
 
-Возвращает число прописью @racket[n] и добавялет к нему единицу измерения @racket[units]. Единица измерения можеть быть #f, тонда возвращается просто число.
+Возвращает число прописью @racket[n] и добавялет к нему единицу измерения @racket[units]. Единица измерения можеть быть #f, тогда возвращается просто число.
 Единица измерения представлена в виде массива из трёх строк как в @racket[plural-text].}
